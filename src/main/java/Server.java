@@ -32,7 +32,7 @@ public class Server {
                             "think about your behavior and come again, the connection is broken\n", name));
             }
 
-            System.out.printf("New connection accepted:\n%s: %s:%d\n", name, clientSocket.getInetAddress(), clientSocket.getPort());
+            System.out.printf("New connection accepted:\n%s: %s:%d\n", name, clientSocket.getInetAddress().getHostAddress(), clientSocket.getPort());
         } catch (IOException e) {
             e.printStackTrace();
         }
